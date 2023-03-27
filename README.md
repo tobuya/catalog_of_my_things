@@ -94,19 +94,16 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-
 Example commands:
 
 ```sh
   cd my-folder
   git clone git@github.com:tobuya/catalog_of_my_things.git
 ```
--
 
 ### Install
 
 Install this project with:
-
 
 Example command:
 
@@ -114,7 +111,6 @@ Example command:
   cd catalog_of_my_things.git
   gem install
 ```
--
 
 ### Usage
 
@@ -124,7 +120,6 @@ To run the project, execute the following command:
 ```sh
   ruby main.rb
 ```
--
 
 ### Run tests
 
@@ -133,7 +128,6 @@ To run tests, run the following command:
 ```sh
   rspec --pattern spec/*_spec.rb
 ```
--
 
 ### Deployment
 
