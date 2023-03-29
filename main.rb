@@ -1,6 +1,7 @@
 require_relative 'main/console'
 require_relative 'main/options'
 
+
 class Main
   def start
     puts 'Catalog Of My Things!'
