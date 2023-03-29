@@ -13,12 +13,14 @@ class ChooseOption
       @app.list_all_books
     when 3
       @app.list_all_labels
-    # when 4
-    #   @app.add_music_album
-    # when 5
-    #   @app.list_all_music_albums
-    # when 6
-    #   @app.list_all_genres
+
+    when 4
+      @app.add_music_album
+    when 5
+      @app.list_all_music_albums
+    when 6
+      @app.list_all_genres
+
     # when 7
     #   @app.add_a_game
     # when 8
