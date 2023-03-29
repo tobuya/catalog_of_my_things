@@ -4,6 +4,7 @@ require_relative 'classes/game'
 require_relative 'classes/genre'
 require_relative 'classes/label'
 require_relative 'classes/music_album'
+
 class App
   def initialize
     @book = Book.new
