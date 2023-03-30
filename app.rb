@@ -1,16 +1,13 @@
 require_relative 'classes/book'
 require_relative 'classes/label'
-require './data/preserve_data'
-# require_relative 'classes/author'
-# require_relative 'classes/game'
-# require_relative 'classes/genre'
-# require_relative 'classes/music_album'
+require_relative 'classes/genre'
+require_relative 'classes/music_album'
+require_relative 'data/preserve_data'
 
 class App
   def initialize
     @books = []
     @labels = []
-
     @music_album = []
     @genre = []
     @game = []
@@ -84,26 +81,30 @@ class App
     on_spotify = gets.chomp.upcase == 'Y'
     new_album = MusicAlbum.new(name, publish_date, on_spotify, nil)
     @music_album << new_album
+    save_data(@music_album, './data/music_album.json')
     puts "Enter the genre of the album:\n"
     genre_name = gets.chomp
     new_genre = Genre.new(nil, genre_name)
     @genre << new_genre
+    save_data(@genre, './data/genre.json')
     puts 'A new album has been created successfully'
   end
 
   def list_all_music_albums
+    @music_album = read_data('./data/music_album.json')
     return puts 'No albums found' if @music_album.empty?
 
     @music_album.each_with_index do |album, index|
-      puts "#{index + 1}) Name: #{album.name}, On spotify: #{album.on_spotify}, Publish date: #{album.publish_date}"
+      puts "#{index + 1}) Name: #{album['name']}, On spotify: #{album['on_spotify']}, Publish date: #{album['publish_date']}"
     end
   end
 
   def list_all_genres
+    @genre = read_data('./data/genre.json')
     return puts 'No genres found' if @genre.empty?
 
     @genre.each_with_index do |genre, index|
-      puts "#{index + 1}) Genre: #{genre.name}"
+      puts "#{index + 1}) Genre: #{genre['name']}"
     end
   end
 
