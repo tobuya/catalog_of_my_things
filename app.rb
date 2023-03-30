@@ -8,7 +8,6 @@ class App
   def initialize
     @books = []
     @labels = []
-
     @music_album = []
     @genre = []
     @game = []
@@ -92,18 +91,18 @@ class App
   end
 
   def list_all_music_albums
+    @music_album = read_data('./data/music_album.json')
     return puts 'No albums found' if @music_album.empty?
 
-    @music_album = read_data('./data/music_album.json')
     @music_album.each_with_index do |album, index|
       puts "#{index + 1}) Name: #{album['name']}, On spotify: #{album['on_spotify']}, Publish date: #{album['publish_date']}"
     end
   end
 
   def list_all_genres
+    @genre = read_data('./data/genre.json')
     return puts 'No genres found' if @genre.empty?
 
-    @genre = read_data('./data/genre.json')
     @genre.each_with_index do |genre, index|
       puts "#{index + 1}) Genre: #{genre['name']}"
     end
