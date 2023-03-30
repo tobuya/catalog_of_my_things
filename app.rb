@@ -43,13 +43,13 @@ class App
     label_color = gets.chomp
     new_label = Label.new(label_title, label_color)
     @labels << new_label
-    # save_data(@labels, './data/labels.json' )
-    # save_data(@books, './data/books.json')
+    save_data(@labels, './data/labels.json')
+    save_data(@books, './data/books.json')
     colorize_output(32, "The Book '#{name}' was added successfully!")
   end
 
   def list_all_books
-    # @books = read_data('./data/books.json')
+    @books = read_data('./data/books.json')
     if @books.empty?
       colorize_output(31, 'There are no books yet')
       return
