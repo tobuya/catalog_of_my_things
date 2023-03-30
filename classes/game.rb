@@ -14,4 +14,12 @@ class Game < Item
     @last_played_at = Date.today - Date.parse(last_played_at)
     super() && @last_played_at > 2
   end
+
+  def to_h
+    {
+      publish_date: @publish_date,
+      multiplayer: @multiplayer,
+      last_played_at: @last_played_at
+    }
+  end
 end
