@@ -9,31 +9,6 @@ class App
   def initialize
     @games = []
     @authors = []
-  end
-
-  def add_book
-    @book.add_book
-  end
-
-  def list_all_books
-    @book.list_all_books
-  end
-
-  def list_all_labels
-    @label.list_all_labels
-  end
-
-  def add_music_album
-    @music_album.add_music_album
-  end
-
-  def list_all_music_albums
-    @music_album.list_all_music_albums
-  end
-
-  def list_all_genres
-    @genre.list_all_genres
-  end
 
   def add_a_game
     print 'Enter the publish date of game [YYYY-MM-DD]'
