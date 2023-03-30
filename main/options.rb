@@ -20,13 +20,12 @@ class ChooseOption
       @app.list_all_music_albums
     when 6
       @app.list_all_genres
-
-    # when 7
-    #   @app.add_a_game
-    # when 8
-    #   @app.list_of_games
-    # when 9
-    #   @app.list_all_authors
+    when 7
+      @app.add_a_game
+    when 8
+      @app.list_of_games
+    when 9
+      @app.list_all_authors
     when 10
       puts 'Thank you for using this app!'
       exit
