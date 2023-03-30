@@ -9,6 +9,7 @@ class App
   def initialize
     @games = []
     @authors = []
+  end
 
   def add_a_game
     print 'Enter the publish date of game [YYYY-MM-DD]'
