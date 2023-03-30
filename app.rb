@@ -3,8 +3,8 @@ require_relative 'classes/label'
 # require './data/preserve_data'
 # require_relative 'classes/author'
 # require_relative 'classes/game'
-# require_relative 'classes/genre'
-# require_relative 'classes/music_album'
+require_relative 'classes/genre'
+require_relative 'classes/music_album'
 class App
   def initialize
     @books = []
