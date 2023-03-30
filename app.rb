@@ -89,24 +89,24 @@ class App
     new_genre = Genre.new(nil, genre_name)
     @genre << new_genre
     save_data(@genre, './data/genre.json')
-    puts 'A new album has been created successfully'
+    colorize_output(32, 'A new album has been created successfully!')
   end
 
   def list_all_music_albums
     @music_album = read_data('./data/music_album.json')
-    return puts 'No albums found' if @music_album.empty?
+    colorize_output(31, 'No albums found') if @music_album.empty?
 
     @music_album.each_with_index do |album, index|
-      puts "#{index + 1}) Name: #{album['name']}, On spotify: #{album['on_spotify']}, Publish date: #{album['publish_date']}"
+      colorize_output(32, "#{index + 1}) Name: #{album['name']}, On spotify: #{album['on_spotify']}, Publish date: #{album['publish_date']}")
     end
   end
 
   def list_all_genres
     @genre = read_data('./data/genre.json')
-    return puts 'No genres found' if @genre.empty?
+    colorize_output(31, 'No albums found') if @music_album.empty?
 
     @genre.each_with_index do |genre, index|
-      puts "#{index + 1}) Genre: #{genre['name']}"
+      colorize_output(32, "#{index + 1}) Genre: #{genre['name']}")
     end
   end
 
