@@ -1,7 +1,6 @@
 require_relative '../classes/game'
 require 'time'
 
-
 describe Game do
   context 'When testing the Game class' do
     game = Game.new(20, '2020-10-02', 'Y', '2020-02-10')

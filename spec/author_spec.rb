@@ -2,7 +2,6 @@ require_relative '../classes/author'
 require_relative '../item'
 require 'date'
 
-
 describe Author do
   author = Author.new('Micheal', 'Johnson')
   item = Item.new(Date.today, true)
