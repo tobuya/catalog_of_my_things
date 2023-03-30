@@ -24,6 +24,9 @@ class Item
 
   def add_author(author)
     @author = author
+    # saving the current item object refered to as self
+    # to the author objects item variable
+    author.items << self unless author.items.include?(self)
   end
 
   private :can_be_archived?
