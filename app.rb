@@ -9,8 +9,8 @@ class App
   def initialize
     @books = []
     @labels = []
-    # @music_album = MusicAlbum.new
-    # @genre = Genre.new
+    @music_album = []
+    @genre = []
     # @game = Game.new
     # @author = Author.new
   end
