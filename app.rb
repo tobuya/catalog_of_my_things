@@ -1,14 +1,16 @@
 require_relative 'classes/book'
 require_relative 'classes/label'
-# require './data/preserve_data'
-require_relative 'classes/author'
-require_relative 'classes/game'
-require_relative 'classes/genre'
-require_relative 'classes/music_album'
+require './data/preserve_data'
+# require_relative 'classes/author'
+# require_relative 'classes/game'
+# require_relative 'classes/genre'
+# require_relative 'classes/music_album'
+
 class App
   def initialize
     @books = []
     @labels = []
+
     @music_album = []
     @genre = []
     @game = []
