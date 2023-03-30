@@ -1,6 +1,5 @@
 <a name="readme-top"></a>
 
-
 <div align="center">
 
   <h3><b>Catalog Of My Things</b></h3>
@@ -27,8 +26,6 @@
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
-
-<!-- PROJECT DESCRIPTION -->
 
 # 📖 Catalog Of My Things <a name="about-project"></a>
 
@@ -68,13 +65,11 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Video Demo <a name="live-demo"></a>
 
-- [Live Demo Link: To be updated soon](https://google.com)
+- [Click Here To View Live](https://drive.google.com/file/d/1F0C2C5VxHnj884ti9L7jUPqvxEDDzXkN/view)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -165,9 +160,8 @@ You can deploy this project on the console using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add database**
 - [ ] **Add more classes**
-- [ ] **Implement all the project features**
+- [ ] **Implement more features**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
