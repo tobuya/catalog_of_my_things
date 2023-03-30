@@ -1,7 +1,7 @@
 require 'date'
 
 class Item
-  attr_accessor :publish_date, :archived, :label, :genre, :author, :source
+  attr_accessor :publish_date, :archived, :label, :genre, :author
 
   def initialize(_id, publish_date, archived: false)
     @id = Random.rand(1..1000)
@@ -24,8 +24,6 @@ class Item
 
   def add_author(author)
     @author = author
-    # saving the current item object refered to as self
-    # to the author objects item variable
     author.items << self unless author.items.include?(self)
   end
 
