@@ -35,5 +35,9 @@ describe MusicAlbum do
       expect(Date.parse(album.publish_date)).to eq Date.parse('2018-01-01')
       expect(album.on_spotify).to be false
     end
+    it 'Check if it cannot be archived when on_spotify is false' do
+      music_album = MusicAlbum.new('Abbey Road', '1969-09-26', true, 1)
+      expect(music_album.send(:can_be_archived?)).to be true
+    end
   end
 end

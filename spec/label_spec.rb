@@ -5,7 +5,7 @@ require 'date'
 
 describe Label do
   context 'Testing the label class' do
-    book = Book.new('Harry Potel', 'publisher', 'bad', '2020/7/09')
+    book = Book.new('Harry Potel', 'publisher', 'bad', '2020/7/09', 'J. K. Rowling')
     label = Label.new(' Book-label', 'black')
 
     it 'Should validate the label title' do
@@ -14,6 +14,10 @@ describe Label do
 
     it 'Should validate the label title' do
       expect(label.color).to eq 'black'
+    end
+
+    it 'Should validate the book author' do
+      expect(book.author).to eq 'J. K. Rowling'
     end
 
     it 'should add book item object to label items array' do

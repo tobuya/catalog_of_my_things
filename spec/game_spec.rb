@@ -12,5 +12,8 @@ describe Game do
     it 'should detect the date the album was published' do
       expect(Date.parse(game.publish_date)).to eq Date.parse('2020-10-02')
     end
+    it 'Should be archivable' do
+      expect(game.send(:can_be_archived?)).to be(true)
+    end
   end
 end
