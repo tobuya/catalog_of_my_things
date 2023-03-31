@@ -29,6 +29,8 @@ class App
     name = gets.chomp
     puts 'Please enter the publisher:'
     publisher = gets.chomp
+    puts 'Please enter the author name:'
+    author = gets.chomp
     puts 'Please enter state of the book: good or bad'
     cover_state = gets.chomp
     if cover_state != 'good' && cover_state != 'bad'
@@ -37,7 +39,7 @@ class App
     end
     puts 'Please enter the publish date of the book: YYYY-MM-DD'
     date = gets.chomp
-    book = Book.new(name, cover_state, publisher, date)
+    book = Book.new(name, cover_state, publisher, date, author)
     @books << book
     puts "Enter the title label of the book:\n"
     label_title = gets.chomp
@@ -58,17 +60,18 @@ class App
     end
     @books.each_with_index do |book, index|
       print "#{index + 1}-Name: #{book['name']}, Publisher: #{book['publisher']},
-       Cover state: #{book['cover_state']}, Publish date: #{book['publish_date']}\n\n"
+       Cover state: #{book['cover_state']}, Publish date: #{book['publish_date']}, Author: #{book['author']}\n\n"
     end
   end
 
   def list_all_labels
+    @labels = read_data('./data/labels.json')
     if @labels.empty?
       colorize_output(31, 'There are no labels yet')
     else
       puts "-------------------------------\n"
       @labels.each do |label|
-        print "ID: #{label.id} , Label-Title: #{label.title} , Color: #{label.color}\n"
+        print "ID: #{label['id']} , Label-Title: #{label['title']} , Color: #{label['color']}\n"
       end
       puts "-------------------------------\n\n"
     end
