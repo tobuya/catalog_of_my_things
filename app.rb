@@ -78,16 +78,16 @@ class App
   end
 
   def add_music_album
-    puts 'Enter the name of the album:'
+    colorize_output(32, 'Enter the name of the album:')
     name = gets.chomp
-    puts 'Enter the album publish Date: YYYY-MM-DD'
+    colorize_output(32, 'Enter the album publish Date: YYYY-MM-DD')
     publish_date = gets.chomp
-    puts 'Is the album on spotify? [Y/N]'
+    colorize_output(32, 'Is the album on spotify? [Y/N]')
     on_spotify = gets.chomp.upcase == 'Y'
     new_album = MusicAlbum.new(name, publish_date, on_spotify, nil)
     @music_album << new_album
     save_data(@music_album, './data/music_album.json')
-    puts "Enter the genre of the album:\n"
+    colorize_output(32, 'Enter the genre of the album:\n')
     genre_name = gets.chomp
     new_genre = Genre.new(nil, genre_name)
     @genre << new_genre
@@ -136,7 +136,7 @@ class App
     @authors << new_author
     save_data(@games, './data/game.json')
     save_data(@authors, './data/author.json')
-    puts 'Author added for the Game successfully 🤹‍♂️✅ '
+    colorize_output(32, 'Author added for the Game successfully 🤹‍♂️✅')
   end
 
   def list_of_games
@@ -151,7 +151,7 @@ class App
   def list_all_authors
     @authors = read_data('./data/author.json')
     if @authors.empty?
-      puts 'No author to Show 🚫 Please add some Authors . . .'
+      colorize_output(32, 'No author to Show 🚫 Please add some Authors . . .')
     else
       @authors.each_with_index do |author, index|
         puts "#{index + 1} First Name: #{author['first_name']} | Last Name: #{author['last_name']}"
@@ -160,6 +160,6 @@ class App
   end
 
   def invalid_input
-    puts 'Invalid entry, try again'
+    colorize_output(32, 'Invalid entry, try again')
   end
 end
